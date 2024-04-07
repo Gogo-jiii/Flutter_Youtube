@@ -45,10 +45,12 @@ class _MyHomePageState extends State<MyHomePage> {
       startSeconds: 60,
       endSeconds: 90,
       params: const YoutubePlayerParams(
+          enableJavaScript: false,
+          enableKeyboard: false,
           showFullscreenButton: false,
           color: "green",
           mute: true,
-          showControls: true),
+          showControls: false),
     )..listen((event) {
         setState(() {
           if (event.playerState.name == "ended") {
